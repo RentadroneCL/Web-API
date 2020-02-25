@@ -11,6 +11,6 @@ app.config.from_mapping(
 )
 
 api = Api(app)
-api.add_resource(PredictionController, '/')
+api.add_resource(PredictionController, '/<string:data>', '/prediction/<string:data>')
 
 __version__ = "0.1"
