@@ -1,9 +1,11 @@
 # Web-API
 
+[droneraising](https://droneraising.com) REST APIs.
+
 ## Contribution guidelines
 
 **If you want to contribute to Rentadrone.cl, be sure to review the
-[contribution guidelines](CONTRIBUTING.md). This project adheres to TensorFlow's
+[contribution guidelines](CONTRIBUTING.md). This project adheres to Contributor Covenant's
 [code of conduct](CODE_OF_CONDUCT.md). By participating, you are expected to
 uphold this code.**
 
