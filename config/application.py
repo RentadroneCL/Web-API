@@ -54,5 +54,13 @@ config = {
     # This key is used by the encrypter service and should be set
     # to a random, 32 character string, otherwise these encrypted strings
     # will not be safe. Please do this before deploying an application!
-    'key': getenv('APP_KEY', None)
+    'key': getenv('APP_KEY', None),
+
+    # --------------------------------------------------------------------------
+    # Cross-Origin Resource Sharing (CORS)
+    # --------------------------------------------------------------------------
+    #
+    # The origin, or list of origins to allow requests from. The origin(s) may be
+    # regular expressions, case-sensitive strings, or else an asterisk
+    'origins': getenv('CORS_DOMAINS', '*')
 }
