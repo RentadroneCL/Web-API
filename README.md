@@ -2,6 +2,30 @@
 
 [droneraising](https://droneraising.com) REST APIs.
 
+## Requirements
+Python 3.6+
+
+## Installation
+In the root project execute the following command to install all dependencies project
+
+```
+pip install -r requirements.txt
+```
+
+You will also need an ASGI server, for production such as <a href="http://www.uvicorn.org" class="external-link" target="_blank">Uvicorn</a> or <a href="https://gitlab.com/pgjones/hypercorn" class="external-link" target="_blank">Hypercorn</a>.
+
+```bash
+pip install uvicorn
+```
+
+### Run it
+
+Run the server with:
+
+```bash
+uvicorn main:app --reload
+```
+
 ## Contribution guidelines
 
 **If you want to contribute to Rentadrone.cl, be sure to review the
