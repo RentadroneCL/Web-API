@@ -14,6 +14,6 @@ app.config.from_mapping(
 CORS(app, origins=config['origins'])
 
 api = Api(app)
-api.add_resource(PredictionController, '/<string:data>', '/prediction/<string:data>')
+api.add_resource(PredictionController, '/prediction')
 
 __version__ = "0.1"
