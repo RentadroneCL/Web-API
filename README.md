@@ -27,7 +27,7 @@ The next thing you should do after installing is set your application key to a r
 
 Typically, this string should be 32 characters long. The key can be set in the `.env` environment file. If you have not copied the `.env.example` file to a new file named `.env`, you should do that now. If the application key is not set, your user sessions and other encrypted data will not be secure!
 
-### Model configuration
+### Model Configuration
 The model that we are going to deploy is for predicting photovoltaic fault. You can get the data [here](https://github.com/RentadroneCL/model-definition).
 
 We start by loading the data and compiled models into the `storage/model` folder and the configuration files for each model in the `storage/config` folder and saving the names of the features that we want to use in our model.
