@@ -35,7 +35,7 @@ We start by loading the data and compiled models into the `storage/model` folder
 ### Example model configuration file
 ```js
 {
-  "model" : {
+  "model": {
     "min_input_size": 400,
     "max_input_size": 400,
     "anchors": [5,7, 10,14, 15, 15, 26,32, 45,119, 54,18, 94,59, 109,183, 200,21],
