@@ -18,6 +18,37 @@ You will also need an ASGI server, for production such as <a href="http://www.uv
 pip install uvicorn
 ```
 
+## Configuration
+### Configuration Files
+All of the configuration files for the API  are stored in the `config` directory. Each option is documented, so feel free to look through the files and get familiar with the options available to you.
+
+### Application Key
+The next thing you should do after installing is set your application key to a random string.
+
+Typically, this string should be 32 characters long. The key can be set in the `.env` environment file. If you have not copied the `.env.example` file to a new file named `.env`, you should do that now. If the application key is not set, your user sessions and other encrypted data will not be secure!
+
+### Model configuration
+The model that we are going to deploy is for predicting photovoltaic fault. You can get the data [here](https://github.com/RentadroneCL/model-definition).
+
+We start by loading the data and compiled models into the `storage/model` folder and the configuration files for each model in the `storage/config` folder and saving the names of the features that we want to use in our model.
+
+### Example model configuration file
+```js
+{
+  "model" : {
+    "min_input_size": 400,
+    "max_input_size": 400,
+    "anchors": [5,7, 10,14, 15, 15, 26,32, 45,119, 54,18, 94,59, 109,183, 200,21],
+    "labels": ["1"],
+    "backend": "full_yolo_backend.h5"
+  }
+}
+```
+
+After we have prepared the data and saved all necessary files it is time to start creating the API to serve our model from.
+
+**NOTE:** There are several methods for saving a model, each with its own sets of pros and cons you may change in function of your necesities.
+
 ### Run it
 
 Run the server with:
