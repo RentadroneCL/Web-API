@@ -30,6 +30,9 @@ class PredictionController(Resource):
         self.model['model_2'] = load_model(self.model_compiled['model_2'])
 
     def post(self):
+        if not request.is_json:
+            return None
+
         collection = request.get_json()
         images = [io.imread(item['url']) for item in collection]
 
