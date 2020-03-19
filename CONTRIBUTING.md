@@ -37,7 +37,7 @@ Before sending your pull requests, make sure you followed this list.
 - Read [Code of Conduct](CODE_OF_CONDUCT.md).
 - Make sure your changes are consistent with the guidelines and follow the
 [PEP 8 Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/).
-- **Add tests!** Your patch won't be accepted if it doesn't have tests.
+- **In Tests We Trust!** Add tests, your patch won't be accepted if it doesn't have tests.
 - **Document any change in behaviour.** Make sure the `README.md` and any other relevant documentation are kept up-to-date.
 - **Consider our release cycle.** We try to follow [SemVer v2.0.0](http://semver.org/). Randomly breaking public APIs is not an option.
 - **Create feature branches.** Don't ask us to pull from your master branch.
