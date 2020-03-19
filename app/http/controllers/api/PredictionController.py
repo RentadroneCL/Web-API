@@ -3,7 +3,7 @@ from os import fspath
 from skimage import io
 from flask import request
 from flask_restful import Resource
-from keras.models import load_model
+from tensorflow.keras.models import load_model
 from config.application import storage_path
 from yolo3.utils.utils import get_yolo_boxes
 
