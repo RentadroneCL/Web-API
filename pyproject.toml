@@ -17,6 +17,7 @@ scikit-image = "^0.16.2"
 [tool.poetry.dev-dependencies]
 pytest = "^5.4.1"
 pytest-flask = "^1.0.0"
+black = "^19.10b0"
 
 [build-system]
 requires = ["poetry>=0.12"]
