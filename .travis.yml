@@ -1,0 +1,12 @@
+dist: "bionic"
+language: "python"
+python:
+  - "3.7"
+install:
+  - pip install poetry
+  - poetry install
+script:
+  - poetry run safety check
+  - poetry run black . --check
+  - poetry run mypy python_rest
+  - poetry run pytest
