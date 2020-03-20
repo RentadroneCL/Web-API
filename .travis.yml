@@ -8,5 +8,5 @@ install:
 script:
   - poetry run safety check
   - poetry run black . --check
-  - poetry run mypy python_rest
+  - poetry run mypy app
   - poetry run pytest
