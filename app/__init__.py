@@ -22,19 +22,17 @@ def create_app() -> Flask:
     app = Flask(__name__)
 
     app.config.from_mapping(
-        ENV=config['env'],
-        DEBUG=config['debug'],
-        SECRET_KEY=config['key']
+        ENV=config["env"], DEBUG=config["debug"], SECRET_KEY=config["key"]
     )
 
-    CORS(app, origins=config['origins'])
+    CORS(app, origins=config["origins"])
 
     # Initialize Extensions
     api.init_app(app)
 
     with app.app_context():
         # Register resources
-        api.add_resource(PredictionController, '/prediction')
+        api.add_resource(PredictionController, "/prediction")
 
     return app
 

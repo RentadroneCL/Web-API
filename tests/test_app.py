@@ -4,14 +4,12 @@ from config.application import config
 
 
 def test_version():
-    assert __version__ == '0.1.0'
+    assert __version__ == "0.1.0"
 
 
 def test_request_headers(client):
-    headers = {
-        'Content-Type': 'application/json'
-    }
+    headers = {"Content-Type": "application/json"}
 
-    client.post(config['url'], headers=headers)
+    client.post(config["url"], headers=headers)
 
-    assert request.headers['Content-Type'] == 'application/json'
+    assert request.headers["Content-Type"] == "application/json"
