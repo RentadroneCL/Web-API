@@ -6,7 +6,7 @@ authors = ["Alvaro Farias <afariasfermin@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.6"
 Flask = "^1.1.1"
 Flask-Cors = "^3.0.8"
 Flask-RESTful = "^0.3.8"
