@@ -333,6 +333,27 @@ docs = ["sphinx", "rst.linker"]
 testing = ["packaging", "importlib-resources"]
 
 [[package]]
+category = "dev"
+description = "Read resources from Python packages"
+marker = "python_version < \"3.7\""
+name = "importlib-resources"
+optional = false
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
+version = "1.4.0"
+
+[package.dependencies]
+[package.dependencies.importlib-metadata]
+python = "<3.8"
+version = "*"
+
+[package.dependencies.zipp]
+python = "<3.8"
+version = ">=0.4"
+
+[package.extras]
+docs = ["sphinx", "rst.linker", "jaraco.packaging"]
+
+[[package]]
 category = "main"
 description = "Various helpers to pass data to untrusted environments and back."
 name = "itsdangerous"
@@ -967,6 +988,10 @@ six = ">=1.9.0,<2"
 python = "<3.8"
 version = ">=0.12,<2"
 
+[package.dependencies.importlib-resources]
+python = "<3.7"
+version = ">=1.0,<2"
+
 [package.extras]
 docs = ["sphinx (>=2.0.0,<3)", "sphinx-argparse (>=0.2.5,<1)", "sphinx-rtd-theme (>=0.4.3,<1)", "towncrier (>=19.9.0rc1)", "proselint (>=0.10.2,<1)"]
 testing = ["pytest (>=4.0.0,<6)", "coverage (>=4.5.1,<6)", "pytest-mock (>=2.0.0,<3)", "pytest-env (>=0.6.2,<1)", "pytest-timeout (>=1.3.4,<2)", "packaging (>=20.0)", "xonsh (>=0.9.16,<1)"]
@@ -1033,8 +1058,8 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "1b5bdf6e639d0221b94549b050b3d517691d5d55b0d9472baa233eebbc6f6bab"
-python-versions = "^3.7"
+content-hash = "d636c6ef4f03f59b82ae5485bfe227ca4d1351a9c712e4d4b96a918d532627af"
+python-versions = "^3.6"
 
 [metadata.files]
 absl-py = [
@@ -1206,6 +1231,10 @@ imageio = [
 importlib-metadata = [
     {file = "importlib_metadata-1.6.0-py2.py3-none-any.whl", hash = "sha256:2a688cbaa90e0cc587f1df48bdc97a6eadccdcd9c35fb3f976a09e3b5016d90f"},
     {file = "importlib_metadata-1.6.0.tar.gz", hash = "sha256:34513a8a0c4962bc66d35b359558fd8a5e10cd472d37aec5f66858addef32c1e"},
+]
+importlib-resources = [
+    {file = "importlib_resources-1.4.0-py2.py3-none-any.whl", hash = "sha256:dd98ceeef3f5ad2ef4cc287b8586da4ebad15877f351e9688987ad663a0a29b8"},
+    {file = "importlib_resources-1.4.0.tar.gz", hash = "sha256:4019b6a9082d8ada9def02bece4a76b131518866790d58fdda0b5f8c603b36c2"},
 ]
 itsdangerous = [
     {file = "itsdangerous-1.1.0-py2.py3-none-any.whl", hash = "sha256:b12271b2047cb23eeb98c8b5622e2e5c5e9abd9784a153e9d8ef9cb4dd09d749"},
