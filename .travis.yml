@@ -5,10 +5,10 @@ python:
 install:
   - pip install pip --upgrade
   - pip install tensorflow==2.1
-  - pip install poetry
-  - poetry install
+  - pip install -r requirements.txt
+#  - poetry install
 script:
   - poetry run safety check
   - poetry run black . --check
-  - poetry run mypy app
+#  - poetry run mypy app
   - poetry run pytest
