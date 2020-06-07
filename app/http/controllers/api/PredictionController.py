@@ -112,7 +112,7 @@ class PredictionController(Resource):
                     {
                         "class": labels_1[boxes.label],
                         "label": "Soiling Fault",
-                        "score": boxes.get_score(),
+                        "score": str(boxes.get_score()),
                         "xmax": boxes.xmax,
                         "xmin": boxes.xmin,
                         "ymax": boxes.ymax,
@@ -124,7 +124,7 @@ class PredictionController(Resource):
                 item["objects"].append(
                     {
                         "class": labels_2[boxes.label],
-                        "score": boxes.get_score(),
+                        "score": str(boxes.get_score()),
                         "label": "Diode Fault",
                         "xmax": boxes.xmax,
                         "xmin": boxes.xmin,
