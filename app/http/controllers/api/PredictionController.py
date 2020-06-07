@@ -137,7 +137,7 @@ class PredictionController(Resource):
                 item["objects"].append(
                     {
                         "class": labels_3[boxes.label],
-                        "score": boxes.classes[0],
+                        "score": str(boxes.classes[0]),
                         "label": "Panel Disconnect",
                         "xmax": boxes.xmax,
                         "xmin": boxes.xmin,
