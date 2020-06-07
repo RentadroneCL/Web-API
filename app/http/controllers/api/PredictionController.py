@@ -5,7 +5,7 @@ from flask import request
 from flask_restful import Resource
 from config.application import storage_path
 from tensorflow.keras.models import load_model
-from utils import disconnected, get_yolo_boxes
+from utils.utils import disconnected, get_yolo_boxes
 
 
 class PredictionController(Resource):
