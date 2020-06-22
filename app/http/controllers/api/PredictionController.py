@@ -116,7 +116,7 @@ class PredictionController(Resource):
                         "xmax": boxes.xmax,
                         "xmin": boxes.xmin,
                         "ymax": boxes.ymax,
-                        "ymin": boxes.ymax,
+                        "ymin": boxes.ymin,
                     }
                 )
 
@@ -129,7 +129,7 @@ class PredictionController(Resource):
                         "xmax": boxes.xmax,
                         "xmin": boxes.xmin,
                         "ymax": boxes.ymax,
-                        "ymin": boxes.ymax,
+                        "ymin": boxes.ymin,
                     }
                 )
 
@@ -142,7 +142,7 @@ class PredictionController(Resource):
                         "xmax": boxes.xmax,
                         "xmin": boxes.xmin,
                         "ymax": boxes.ymax,
-                        "ymin": boxes.ymax,
+                        "ymin": boxes.ymin,
                     }
                 )
 
