@@ -3,12 +3,18 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 [![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://www.mypy-lang.org)
 
-[droneraising](https://droneraising.com) REST APIs.
+[Rentadrone.cl](https://rentadronecl.github.io) REST API for deploy the [detection models](https://github.com/RentadroneCL/model-definition).
+
+## Documentation
+See [https://rentadronecl.github.io/docs](https://rentadronecl.github.io/docs/detection-models) for tutorials and more guides.
+
+## Developers
+Help improve our software! We welcome contributions from everyone, whether to add new features, improve speed, fix existing bugs or add support. [Check our code of conduct](CODE_OF_CONDUCT.md), [the contributing guidelines](CONTRIBUTING.md) and how decisions are made.
 
 ## Requirements
 Python 3.6+
 
-## Installation
+## Quickstart
 In the root project execute the following command to install all dependencies project
 
 ```
@@ -112,7 +118,7 @@ You already created an API that:
 ]
 ```
 
-### Example of output prediction
+### Viewing Results
 ```js
 [
   {
