@@ -3,7 +3,9 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 [![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://www.mypy-lang.org)
 
-[Rentadrone.cl](https://rentadronecl.github.io) REST API for deploy the [detection models](https://github.com/RentadroneCL/model-definition).
+[Rentadrone.cl](https://rentadronecl.github.io)
+
+API specification for deploy the [detection models](https://github.com/RentadroneCL/model-definition/blob/master/README.md), this repository contains a performant, production-ready reference implementation.
 
 ## Documentation
 See [https://rentadronecl.github.io/docs](https://rentadronecl.github.io/docs/detection-models) for tutorials and more guides.
