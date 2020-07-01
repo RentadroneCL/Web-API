@@ -4,12 +4,25 @@
 [![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://www.mypy-lang.org)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 
-[droneraising](https://droneraising.com) REST APIs.
+[Rentadrone.cl](https://rentadronecl.github.io)
+
+API specification for deploy the [detection models](https://github.com/RentadroneCL/model-definition/blob/master/README.md), this repository contains a performant, production-ready reference implementation.
+
+## Documentation
+See [https://rentadronecl.github.io/docs](https://rentadronecl.github.io/docs/detection-models) for tutorials and more guides.
+
+## Developers
+Help improve our software! We welcome contributions from everyone, whether to add new features, improve speed, fix existing bugs or add support. [Check our code of conduct](CODE_OF_CONDUCT.md), [the contributing guidelines](CONTRIBUTING.md) and how decisions are made.
+
+Any code contributions are welcomed as long as they are discussed in [Github Issues](https://github.com/RentadroneCL/Web-API/issues) with maintainers. Be aware that if you decide to change something and submit a PR on your own, it may not be accepted.
+
+#### Creating an issue
+You can open a new issue based on code from an existing pull request. For more information, see [the template for filling issues](https://github.com/RentadroneCL/Web-API/blob/master/.github/ISSUE_TEMPLATE/feature_request.md)
 
 ## Requirements
 Python 3.6+
 
-## Installation
+## Quickstart
 In the root project execute the following command to install all dependencies project
 
 ```
@@ -32,7 +45,16 @@ The next thing you should do after installing is set your application key to a r
 Typically, this string should be 32 characters long. The key can be set in the `.env` environment file. If you have not copied the `.env.example` file to a new file named `.env`, you should do that now. If the application key is not set, your user sessions and other encrypted data will not be secure!
 
 ### Model Configuration
-The model that we are going to deploy is for predicting photovoltaic fault. You can get the data [here](https://github.com/RentadroneCL/model-definition).
+The model that we are going to deploy is for predicting photovoltaic fault. You can get the data [here](https://drive.google.com/drive/folders/1LSc9FkAwJrAAT8pAUWz8aax_biFAMMXS?usp=sharing).
+
+|      Model     |  Weights Trained |  Config  |
+|:--------------:|:------------------:|:--------:|
+|   SSD7 Panel   |      [weight](https://drive.google.com/open?id=1qNjfAp9sW1VJh8ewnb3NKuafhZockTqV)      | [config](Result_ssd7_panel/config_7_panel.json) |
+| SSD300 Soiling |      [weight](https://drive.google.com/open?id=1IiOyYW8yPAh4IALbM_ZVqRhLdxV-ZSPw)      | [config](config_300_fault_1.json) |
+|   YOLO3 Panel  |      [weight](https://drive.google.com/open?id=14zgtgDJv3KTvhRC-VOz6sqsGPC_bdrL1)      | [config](config_full_yolo_panel_infer.json) |
+|  YOLO3 Soiling |      [weight](https://drive.google.com/open?id=1YLgkn1wL5xAGOpwd2gzdfsJVGYPzszn-)      | [config](config_full_yolo_fault_1_infer.json) |
+|   YOLO3 Diode  |      [weight](https://drive.google.com/open?id=1VUtrK9JVTbzBw5dX7_dgLTMToFHbAJl1)      | [config](config_full_yolo_fault_4_infer.json) |
+|   YOLO3 Affected Cell    |      [weight](https://drive.google.com/open?id=1ngyCzw7xF0N5oZnF29EIS5LOl1PFkRRM)      | [config](config_full_yolo_fault_2_infer.json) |
 
 We start by loading the data and compiled models into the `storage/model` folder and the configuration files for each model in the `storage/config` folder and saving the names of the features that we want to use in our model.
 
@@ -113,7 +135,7 @@ You already created an API that:
 ]
 ```
 
-### Example of output prediction
+### Viewing Results
 ```js
 [
   {
@@ -279,8 +301,8 @@ for general questions and discussion, and please direct specific questions to th
 
 ## [Code of Conduct](CODE_OF_CONDUCT.md)
 
-The droneraising code of conduct is derived from the [Contributor Covenant](https://www.contributor-covenant.org). Any violations of the code of conduct may be reported to [Rentadrone.cl](mailto:contacto@rentadrone.cl)
+The code of conduct is derived from the [Contributor Covenant](https://www.contributor-covenant.org). Any violations of the code of conduct may be reported to [Rentadrone.cl](mailto:contacto@rentadrone.cl)
 
 ## License
 
-droneraising is open-sourced software licensed under the [MIT license.](LICENSE)
+open-sourced software licensed under the [MIT license.](LICENSE)

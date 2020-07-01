@@ -5,7 +5,7 @@ from flask import request
 from flask_restful import Resource
 from config.application import storage_path
 from tensorflow.keras.models import load_model
-from utils import disconnected, get_yolo_boxes
+from utils.utils import disconnected, get_yolo_boxes
 
 
 class PredictionController(Resource):
@@ -112,11 +112,11 @@ class PredictionController(Resource):
                     {
                         "class": labels_1[boxes.label],
                         "label": "Soiling Fault",
-                        "score": boxes.get_score(),
+                        "score": str(boxes.get_score()),
                         "xmax": boxes.xmax,
                         "xmin": boxes.xmin,
                         "ymax": boxes.ymax,
-                        "ymin": boxes.ymax,
+                        "ymin": boxes.ymin,
                     }
                 )
 
@@ -124,12 +124,12 @@ class PredictionController(Resource):
                 item["objects"].append(
                     {
                         "class": labels_2[boxes.label],
-                        "score": boxes.get_score(),
+                        "score": str(boxes.get_score()),
                         "label": "Diode Fault",
                         "xmax": boxes.xmax,
                         "xmin": boxes.xmin,
                         "ymax": boxes.ymax,
-                        "ymin": boxes.ymax,
+                        "ymin": boxes.ymin,
                     }
                 )
 
@@ -137,12 +137,12 @@ class PredictionController(Resource):
                 item["objects"].append(
                     {
                         "class": labels_3[boxes.label],
-                        "score": boxes.classes[0],
+                        "score": str(boxes.classes[0]),
                         "label": "Panel Disconnect",
                         "xmax": boxes.xmax,
                         "xmin": boxes.xmin,
                         "ymax": boxes.ymax,
-                        "ymin": boxes.ymax,
+                        "ymin": boxes.ymin,
                     }
                 )
 
