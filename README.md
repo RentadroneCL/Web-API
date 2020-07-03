@@ -2,6 +2,7 @@
 [![Build Status](https://api.travis-ci.org/RentadroneCL/Web-API.svg)](https://travis-ci.org/github/RentadroneCL/Web-API)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 [![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://www.mypy-lang.org)
+[![License](https://poser.pugx.org/composer/spdx-licenses/license)](https://packagist.org/packages/composer/spdx-licenses)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 
 [Rentadrone.cl](https://rentadronecl.github.io)
@@ -305,4 +306,4 @@ The code of conduct is derived from the [Contributor Covenant](https://www.contr
 
 ## License
 
-open-sourced software licensed under the [MIT license.](LICENSE)
+open-source software licensed under the [MIT license.](LICENSE)
