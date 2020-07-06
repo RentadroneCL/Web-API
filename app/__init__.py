@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_cors import CORS
-from flask_restful import Api
+from flask_restful import Api, Resource
 from config.application import config
 from app.http.controllers.api.PredictionController import PredictionController
 
@@ -9,7 +9,6 @@ from app.http.controllers.api.PredictionController import PredictionController
 # -------------------------------------------------------------------------
 #
 # Initialize extensions accessible to any part of our app
-api = Api()
 
 
 def create_app() -> Flask:
@@ -20,15 +19,13 @@ def create_app() -> Flask:
     :return: Flask
     """
     app = Flask(__name__)
+    api = Api(app)
 
     app.config.from_mapping(
         ENV=config["env"], DEBUG=config["debug"], SECRET_KEY=config["key"]
     )
 
     CORS(app, origins=config["origins"])
-
-    # Initialize Extensions
-    api.init_app(app)
 
     with app.app_context():
         # Register resources
