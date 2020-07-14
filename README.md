@@ -10,42 +10,60 @@
 API specification for deploy the [detection models](https://github.com/RentadroneCL/model-definition/blob/master/README.md), this repository contains a performant, production-ready reference implementation.
 
 ## Documentation
+
 See [https://rentadronecl.github.io/docs](https://rentadronecl.github.io/docs/detection-models) for tutorials and more guides.
 
 ## Developers
+
 Help improve our software! We welcome contributions from everyone, whether to add new features, improve speed, fix existing bugs or add support. [Check our code of conduct](CODE_OF_CONDUCT.md), [the contributing guidelines](CONTRIBUTING.md) and how decisions are made.
 
 Any code contributions are welcomed as long as they are discussed in [Github Issues](https://github.com/RentadroneCL/Web-API/issues) with maintainers. Be aware that if you decide to change something and submit a PR on your own, it may not be accepted.
 
-#### Creating an issue
-You can open a new issue based on code from an existing pull request. For more information, see [the template for filling issues](https://github.com/RentadroneCL/Web-API/blob/master/.github/ISSUE_TEMPLATE/feature_request.md)
+### Creating an issue
+
+To encourage active collaboration, we strongly encourages pull requests, not just bug reports. "Bug reports" may also be sent in the form of a pull request containing a failing test.
+
+However, if you file a bug report, your issue should contain a title and a clear description of the issue. You should also include as much relevant information as possible and a code sample that demonstrates the issue. The goal of a bug report is to make it easy for yourself - and others - to replicate the bug and develop a fix. For more information, see the templates for filling issues.
+
+| Template | Description | Example |
+| -------- | ------------|---------|
+| Feature request | Suggest an idea for this project | [template](https://github.com/RentadroneCL/Web-API/blob/master/.github/ISSUE_TEMPLATE/feature_request.md) |
+| Bug report | Create a report to help us improve | [template](https://github.com/RentadroneCL/Web-API/blob/master/.github/ISSUE_TEMPLATE/bug_report.md) |
+
+Remember, bug reports are created in the hope that others with the same problem will be able to collaborate with you on solving it. Do not expect that the bug report will automatically see any activity or that others will jump to fix it. Creating a bug report serves to help yourself and others start on the path of fixing the problem. If you want to chip in, you can help out by fixing any bugs listed in our [issue trackers](https://github.com/RentadroneCL/Web-API/issues).
 
 ## Requirements
+
 Python 3.6+
 
 ## Quickstart
+
 In the root project execute the following command to install all dependencies project
 
-```
+```bash
 pip install -r requirements.txt
 ```
 
-You will also need an ASGI server, for production such as <a href="http://www.uvicorn.org" class="external-link" target="_blank">Uvicorn</a> or <a href="https://gitlab.com/pgjones/hypercorn" class="external-link" target="_blank">Hypercorn</a>.
+You will also need an ASGI server, for production such as [Uvicorn](http://www.uvicorn.org) or  [Hypercorn](https://gitlab.com/pgjones/hypercorn).
 
 ```bash
 pip install uvicorn
 ```
 
 ## Configuration
+
 ### Configuration Files
+
 All of the configuration files for the API  are stored in the `config` directory. Each option is documented, so feel free to look through the files and get familiar with the options available to you.
 
 ### Application Key
+
 The next thing you should do after installing is set your application key to a random string.
 
 Typically, this string should be 32 characters long. The key can be set in the `.env` environment file. If you have not copied the `.env.example` file to a new file named `.env`, you should do that now. If the application key is not set, your user sessions and other encrypted data will not be secure!
 
 ### Model Configuration
+
 The model that we are going to deploy is for predicting photovoltaic fault. You can get the data [here](https://drive.google.com/drive/folders/1LSc9FkAwJrAAT8pAUWz8aax_biFAMMXS?usp=sharing).
 
 |      Model     |  Weights Trained |  Config  |
@@ -60,6 +78,7 @@ The model that we are going to deploy is for predicting photovoltaic fault. You 
 We start by loading the data and compiled models into the `storage/model` folder and the configuration files for each model in the `storage/config` folder and saving the names of the features that we want to use in our model.
 
 ### Example model configuration file
+
 ```js
 {
   "model": {
@@ -74,7 +93,7 @@ We start by loading the data and compiled models into the `storage/model` folder
 
 After we have prepared the data and saved all necessary files it is time to start creating the API to serve our model from.
 
-**NOTE:** There are several methods for saving a model, each with its own sets of pros and cons you may change in function of your necesities.
+**NOTE:** There are several methods for saving a model, each with its own sets of pros and cons you may change in function of your necessity.
 
 ### Run it
 
@@ -103,6 +122,7 @@ You already created an API that:
 * If the mimetype does not indicate JSON `application/json` this returns `None`.
 
 ### Example of an input data
+
 ```js
 [
   {
@@ -137,6 +157,7 @@ You already created an API that:
 ```
 
 ### Viewing Results
+
 ```js
 [
   {
