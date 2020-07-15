@@ -1,4 +1,5 @@
 # Web-API
+
 [![Build Status](https://api.travis-ci.org/RentadroneCL/Web-API.svg)](https://travis-ci.org/github/RentadroneCL/Web-API)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 [![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://www.mypy-lang.org)
@@ -6,6 +7,8 @@
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 
 [Rentadrone.cl](https://rentadronecl.github.io)
+
+## Summary
 
 API specification for deploy the [detection models](https://github.com/RentadroneCL/model-definition/blob/master/README.md), this repository contains a performant, production-ready reference implementation.
 
@@ -307,6 +310,47 @@ You already created an API that:
   }
 ]
 ```
+
+## FAQs
+
+### Current version
+
+**Important:** The default version of the API may change in the future. If you're building an application and care about the stability of the API, be sure to fork the master branch.
+
+### Media types
+
+The Media Type is specified in header of request. The most basic media types the API supports are:
+
+```js
+application/json
+```
+
+Neither of these specify a version, so you will always get the current default JSON representation of resources.
+
+For any media type format that is not supported, the Api should return a 406 Not Acceptable status code.
+
+### Troubleshooting
+
+If you're encountering some oddities in the API, here's a list of resolutions to some of the problems you may be experiencing.
+
+* Why am I getting a 404?
+
+The request could not be understood by the server due to malformed syntax. The client should not repeat the request without modifications
+
+* Why am I not seeing all my results?
+
+Most API calls accessing a list of resources (e.g., users, issues, etc.). If you're making requests and receiving an incomplete set of results, a response is specified in an unsupported content type.
+
+* Why am I getting a 500?
+
+Server Mistake - Indicates that something went wrong on the server that prevent the server from fulfilling the request.
+
+### Third-party libraries
+
+* [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+* [TensorFlow](https://www.tensorflow.org/)
+* [NumPy](https://numpy.org/)
+* [pandas](https://pandas.pydata.org/)
 
 ## Contribution guidelines
 
