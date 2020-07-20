@@ -12,9 +12,11 @@
 
 API specification for deploy the [detection models](https://github.com/RentadroneCL/model-definition/blob/master/README.md), this repository contains a performant, production-ready reference implementation.
 
+![Data Flow](APIDataFlow.svg)
+
 ## Documentation
 
-See [https://rentadronecl.github.io/docs](https://rentadronecl.github.io/docs/detection-models) for tutorials and more guides.
+See [https://rentadronecl.github.io/docs](https://rentadronecl.github.io/docs/developers) for tutorials and more guides.
 
 ## Developers
 
