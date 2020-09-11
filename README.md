@@ -5,6 +5,7 @@
 [![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://www.mypy-lang.org)
 [![License](https://poser.pugx.org/composer/spdx-licenses/license)](https://packagist.org/packages/composer/spdx-licenses)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
+[![Open Source Helpers](https://www.codetriage.com/rentadronecl/web-api/badges/users.svg)](https://www.codetriage.com/rentadronecl/web-api)
 
 [Rentadrone.cl](https://rentadronecl.github.io)
 
