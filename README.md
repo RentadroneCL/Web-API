@@ -19,6 +19,10 @@ API specification for deploy the [detection models](https://github.com/Rentadron
 
 See [https://rentadronecl.github.io/docs](https://rentadronecl.github.io/docs/developers) for tutorials and more guides.
 
+## Forum
+
+This project is part of the [UNICEF Innovation Fund Discourse community](https://unicef-if.discourse.group/c/projects/rentadrone/10). You can post comments or questions about each category of [Rentadrone Developers](https://rentadrone.cl/developers/) algorithms. We encourage users to participate in the forum and to engage with fellow users.
+
 ## Developers
 
 Help improve our software! We welcome contributions from everyone, whether to add new features, improve speed, fix existing bugs or add support. [Check our code of conduct](CODE_OF_CONDUCT.md), [the contributing guidelines](CONTRIBUTING.md) and how decisions are made.
