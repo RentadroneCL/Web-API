@@ -1,6 +1,7 @@
 # Web-API
 
 [![Build Status](https://api.travis-ci.org/RentadroneCL/Web-API.svg)](https://travis-ci.org/github/RentadroneCL/Web-API)
+[![codecov](https://codecov.io/gh/RentadroneCL/Web-API/branch/master/graph/badge.svg?token=20MX0S1C1S)](https://codecov.io/gh/RentadroneCL/Web-API)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 [![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://www.mypy-lang.org)
 [![License](https://poser.pugx.org/composer/spdx-licenses/license)](https://packagist.org/packages/composer/spdx-licenses)
