@@ -8,3 +8,5 @@ script:
   - safety check
   - black . --check
   - pytest
+  - coverage run -m pytest tests
+after_success: coveralls
