@@ -7,6 +7,5 @@ install:
 script:
   - safety check
   - black . --check
-  - pytest
-  - coverage run -m pytest tests
+  - coverage run --source=tests -m pytest tests
 after_success: coveralls
