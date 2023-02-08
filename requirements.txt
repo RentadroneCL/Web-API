@@ -15,7 +15,7 @@ click==7.1.2
 clikit==0.4.3
 coverage==5.3
 coveralls==2.1.2
-cryptography==3.2.1
+cryptography==39.0.1
 cycler==0.10.0
 decorator==4.4.2
 distlib==0.3.0
